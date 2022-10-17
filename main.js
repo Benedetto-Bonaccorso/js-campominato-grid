@@ -1,14 +1,52 @@
 let container = document.querySelector(".container")
 
-let maxCells = 100
+let maxCells;
 
-let cellList = document.getElementsByClassName("cell")
+let cellList;
 
-caselleGenerator(maxCells,container)
+let difficulty = 0
+
+function easy(){
+    if(difficulty == 0){
+        difficulty = 1
+        maxCells = 100
+        caselleGenerator(maxCells,container)
+    }
+}
+
+function medium(){
+    if(difficulty == 0){
+        difficulty = 2
+        maxCells = 81
+        caselleGenerator(maxCells,container)
+    }
+}
+
+function hard(){
+    if(difficulty == 0){
+        difficulty = 3
+        maxCells = 49
+        caselleGenerator(maxCells,container)
+    }
+}
 
 function caselleGenerator(maxCells,container){
-    for(let i = 0; i < maxCells; i++){
-        container.innerHTML += `<div class="cell" id="${i}"></div>`
+
+    if(difficulty == 1){
+        for(let i = 0; i < maxCells; i++){
+            cellList = document.getElementsByClassName("cell10")
+            container.innerHTML += `<div class="cell10" id="${i}"></div>`
+        }
+    } else if(difficulty == 2){
+        for(let i = 0; i < maxCells; i++){
+            cellList = document.getElementsByClassName("cell9")
+            container.innerHTML += `<div class="cell9" id="${i}"></div>`
+        }
+    } else if(difficulty == 3){
+        for(let i = 0; i < maxCells; i++){
+            cellList = document.getElementsByClassName("cell7")
+            container.innerHTML += `<div class="cell7" id="${i}"></div>`
+        }
     }
     
     for(let i = 0; i < cellList.length; i++){

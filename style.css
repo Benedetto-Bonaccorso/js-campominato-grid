@@ -15,8 +15,20 @@
         flex-wrap: wrap;
     }
     
-    .cell{
+    .cell10{
         width: calc(100% / 10);
+        aspect-ratio: 1/1;
+        border: 1px solid azure;
+    }
+
+    .cell9{
+        width: calc(100% / 9);
+        aspect-ratio: 1/1;
+        border: 1px solid azure;
+    }
+
+    .cell7{
+        width: calc(100% / 7);
         aspect-ratio: 1/1;
         border: 1px solid azure;
     }
