@@ -35,17 +35,17 @@ function caselleGenerator(maxCells,container){
     if(difficulty == 1){
         for(let i = 0; i < maxCells; i++){
             cellList = document.getElementsByClassName("cell10")
-            container.innerHTML += `<div class="cell10" id="${i}"></div>`
+            container.innerHTML += `<div class="cell10" id="${i}">${i + 1}</div>`
         }
     } else if(difficulty == 2){
         for(let i = 0; i < maxCells; i++){
             cellList = document.getElementsByClassName("cell9")
-            container.innerHTML += `<div class="cell9" id="${i}"></div>`
+            container.innerHTML += `<div class="cell9" id="${i}">${i + 1}</div>`
         }
     } else if(difficulty == 3){
         for(let i = 0; i < maxCells; i++){
             cellList = document.getElementsByClassName("cell7")
-            container.innerHTML += `<div class="cell7" id="${i}"></div>`
+            container.innerHTML += `<div class="cell7" id="${i}">${i + 1}</div>`
         }
     }
     
